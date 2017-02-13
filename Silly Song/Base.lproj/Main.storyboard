@@ -37,9 +37,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mrG-ZW-jT4"/>
                                 </constraints>
-                                <color key="textColor" red="0.51115145090359704" green="0.80064730810047435" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.98232095747299075" green="0.99519493092871048" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="go"/>
                                 <connections>
                                     <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="K5u-G5-UQb"/>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="dk9-DS-xt3"/>

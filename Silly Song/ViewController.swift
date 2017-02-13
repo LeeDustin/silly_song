@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        nameField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +30,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func displayLyrics(_ sender: Any) {
+        var lyrics = ""
+        if let inputName = nameField.text {
+            lyrics = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: inputName)
+        }
+        lyricsView.text = lyrics
     }
 }
 
@@ -53,8 +58,11 @@ func shortNameFromName(name: String) -> String {
 }
 
 func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
-    var output = lyricsTemplate.replacingOccurrences(of: "<FULL_NAME>", with: fullName)
-    output = output.replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
+    var output = ""
+    if fullName != "" {
+        output = lyricsTemplate.replacingOccurrences(of: "<FULL_NAME>", with: fullName)
+        output = output.replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
+    }
     return output
 }
 
@@ -65,3 +73,10 @@ let bananaFanaTemplate = [
     "Me My Mo M<SHORT_NAME>",
     "<FULL_NAME>"].joined(separator: "\n")
 
+// Extending the ViewController to deal with UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+}
