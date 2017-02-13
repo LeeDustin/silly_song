@@ -1,5 +1,6 @@
 # Silly Song  
 ## A sample iOS app  
+iOS 10 - XCode 8 - Swift 3  
 
 -----  
 
