@@ -19,9 +19,7 @@ You can find the course through [this link](https://www.udacity.com/course/swift
 
 #### Screenshots  
   
-![Main View](https://raw.githubusercontent.com/m-alani/silly_song/master/screenshots/screen1.jpg "Main View")  
-![Entering the user name](https://raw.githubusercontent.com/m-alani/silly_song/master/screenshots/screen2.jpg "Entering the user name")  
-![Getting an AWESOME silly song!](https://raw.githubusercontent.com/m-alani/silly_song/master/screenshots/screen3.jpg "Getting an AWESOME silly song!")
+![Screenshots](https://raw.githubusercontent.com/m-alani/silly_song/master/screenshot.jpg "Screenshots")  
 
 -----  
 
