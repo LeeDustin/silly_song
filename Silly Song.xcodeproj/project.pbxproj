@@ -345,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SBAFWB77LC;
 				INFOPLIST_FILE = "Silly Song/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -359,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SBAFWB77LC;
 				INFOPLIST_FILE = "Silly Song/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -418,6 +420,7 @@
 				E01D369C1E513E5E00B511F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E01D369D1E513E5E00B511F8 /* Build configuration list for PBXNativeTarget "Silly SongTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +429,7 @@
 				E01D369F1E513E5E00B511F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
