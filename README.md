@@ -4,8 +4,9 @@ iOS 10 - XCode 8 - Swift 3
 
 -----  
 
-#### The App is built to demonstarate:
+#### The App is created to demonstarate:
 - Swift 3 Strings, Arrays, and general competency
+- Basic knowledge of Unit Testing (XCTest)
 - Basic knowledge of Functional Programming's concepts
 - Basic knowledge of the Delegate Pattern in iOS development
 - Basic knowledge of Auto Layout using XCode's StoryBoard

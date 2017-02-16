@@ -29,6 +29,11 @@ class helperFunctionsTests: XCTestCase {
         XCTAssertEqual(shortNameFromName(name: testInput), "") // Empty input => empty output
     }
     
+    func testShortNameFromNameSpaces() {
+        let testInput = "  "
+        XCTAssertEqual(shortNameFromName(name: testInput), "  ") // Spaces input => same spaces output
+    }
+    
     func testShortNameFromNameAllConsonants() {
         let testInput = "qwrtp"
         XCTAssertEqual(shortNameFromName(name: testInput), "") // All consonants input => empty output
@@ -57,5 +62,38 @@ class helperFunctionsTests: XCTestCase {
     func testShortNameFromNamePeter() {
         let testInput = "Peter"
         XCTAssertEqual(shortNameFromName(name: testInput), "eter") // Peter => eter
+    }
+    
+    /***********
+     lyricsFromName Tests
+     ***********/
+    func testLyricsFromNameEmptyTemplate() {
+        let template = ""
+        let name = "Anna"
+        XCTAssertEqual(lyricsForName(lyricsTemplate: template, fullName: name), "")
+    }
+    
+    func testLyricsFromNameEmptyName() {
+        let template = "<FULL_NAME> and <SHORT_NAME>."
+        let name = ""
+        XCTAssertEqual(lyricsForName(lyricsTemplate: template, fullName: name), "")
+    }
+    
+    func testLyricsFromNameStaticTemplate() {
+        let template = "A template that doesn't use a name"
+        let name = "John"
+        XCTAssertEqual(lyricsForName(lyricsTemplate: template, fullName: name), "A template that doesn't use a name")
+    }
+    
+    func testLyricsFromNameAnna() {
+        let template = "<FULL_NAME> and <SHORT_NAME>."
+        let name = "Anna"
+        XCTAssertEqual(lyricsForName(lyricsTemplate: template, fullName: name), "Anna and anna.")
+    }
+    
+    func testLyricsFromNameJohn() {
+        let template = "<FULL_NAME> and <SHORT_NAME>."
+        let name = "John"
+        XCTAssertEqual(lyricsForName(lyricsTemplate: template, fullName: name), "John and ohn.")
     }
 }
