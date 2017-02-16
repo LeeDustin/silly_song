@@ -12,8 +12,8 @@
 		E01D36861E513E5E00B511F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01D36841E513E5E00B511F8 /* Main.storyboard */; };
 		E01D36881E513E5E00B511F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01D36871E513E5E00B511F8 /* Assets.xcassets */; };
 		E01D368B1E513E5E00B511F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01D36891E513E5E00B511F8 /* LaunchScreen.storyboard */; };
-		E01D36961E513E5E00B511F8 /* Silly_SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01D36951E513E5E00B511F8 /* Silly_SongTests.swift */; };
 		E01D36A11E51478A00B511F8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E01D36A01E51478A00B511F8 /* README.md */; };
+		E0FABC201E55336500B53978 /* helperFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FABC1F1E55336500B53978 /* helperFunctionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +35,9 @@
 		E01D368A1E513E5E00B511F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01D368C1E513E5E00B511F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E01D36911E513E5E00B511F8 /* Silly SongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Silly SongTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E01D36951E513E5E00B511F8 /* Silly_SongTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silly_SongTests.swift; sourceTree = "<group>"; };
 		E01D36971E513E5E00B511F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E01D36A01E51478A00B511F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E0FABC1F1E55336500B53978 /* helperFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helperFunctionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		E01D36941E513E5E00B511F8 /* Silly SongTests */ = {
 			isa = PBXGroup;
 			children = (
-				E01D36951E513E5E00B511F8 /* Silly_SongTests.swift */,
 				E01D36971E513E5E00B511F8 /* Info.plist */,
+				E0FABC1F1E55336500B53978 /* helperFunctionsTests.swift */,
 			);
 			path = "Silly SongTests";
 			sourceTree = "<group>";
@@ -155,6 +155,7 @@
 					E01D36901E513E5E00B511F8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SBAFWB77LC;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E01D367C1E513E5D00B511F8;
 					};
@@ -214,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01D36961E513E5E00B511F8 /* Silly_SongTests.swift in Sources */,
+				E0FABC201E55336500B53978 /* helperFunctionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +377,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SBAFWB77LC;
 				INFOPLIST_FILE = "Silly SongTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.alani.Silly-SongTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Silly SongTests/Silly SongTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silly Song.app/Silly Song";
 			};
@@ -391,11 +395,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SBAFWB77LC;
 				INFOPLIST_FILE = "Silly SongTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.alani.Silly-SongTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Silly SongTests/Silly SongTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Silly Song.app/Silly Song";
 			};
